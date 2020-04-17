@@ -10,7 +10,8 @@ class Currency < ApplicationRecord
         headers = {'X-CMC_PRO_API_KEY' => ENV['API_KEY']}
         request = HTTParty.get(url + self.slug, :headers => headers)
         response = JSON.parse(request.body)
-        response["data"]["1"]["quote"]["USD"]["price"]
+        id = response["data"].keys[0]
+        response["data"][id]["quote"]["USD"]["price"]
     end
 end
 
