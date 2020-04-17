@@ -3,9 +3,9 @@ Dotenv.load
 class Currency < ApplicationRecord
     def current_price
         url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol='
-        p ENV['API_KEY']
+        p self.slug
         headers = {'X-CMC_PRO_API_KEY' => ENV['API_KEY']}
-        request = HTTParty.get(url + self.slug)
+        request = HTTParty.get(url + self.currency_symbol, :headers => headers)
         response = JSON.parse(request.body)
     end
 end
