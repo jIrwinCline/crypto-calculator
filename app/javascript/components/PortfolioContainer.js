@@ -84,7 +84,7 @@ class PortfolioContainer extends Component {
       <div className="grid">
         <div className="left">{searchOrCalculate}</div>
         <div className="right">
-          {/* <Portfolio portfolio={this.state.portfolio} /> */}
+          <Portfolio portfolio={this.state.portfolio} />
         </div>
       </div>
     );
