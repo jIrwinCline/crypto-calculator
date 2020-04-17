@@ -14,7 +14,12 @@ class PortfolioContainer extends Component {
   };
 
   render() {
-    return <div className="grid"></div>;
+    return (
+      <div>
+        <Search />
+        <Calculate />
+      </div>
+    );
   }
 }
 
