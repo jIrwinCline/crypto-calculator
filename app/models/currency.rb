@@ -6,10 +6,10 @@ class Currency < ApplicationRecord
     end
 
     def current_price
-        url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol='
+        url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?slug='
         p self.slug
         headers = {'X-CMC_PRO_API_KEY' => ENV['API_KEY']}
-        request = HTTParty.get(url + self.currency_symbol, :headers => headers)
+        request = HTTParty.get(url + self.slug, :headers => headers)
         response = JSON.parse(request.body)
     end
 end
