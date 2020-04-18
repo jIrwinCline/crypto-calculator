@@ -19,7 +19,7 @@
 
 ## Introduction
 
-_A React and Puby on Rails full stack application for valuing your crypto currency holdings. Backend build with a Rails API integrated with PostgreSQL. And a simple, but effective, Reactjs Frontend!_
+_A React and Ruby on Rails full stack application for valuing your crypto currency holdings. Backend build with a Rails API integrated with PostgreSQL. And a simple, but effective, Reactjs Frontend!_
 
 **Desktop design focused**
 
